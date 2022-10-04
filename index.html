@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My insects</title>
+    <link rel="manifest" href="/insects/manifest.json">
+
+</head>
+
+<body>
+    <h1>Insects</h1>
+    <img id="butterflies" src="butterflies.jpg" alt="Insect" />
+    <img id="butterfly" src="butterfly.jpg" alt="Insect" />
+    <img id="dragonfly" src="dragonfly.jpg" alt="Insect" />
+
+    <script>
+        // Asking the browser if it supports service worker
+        if ('serviceWorker' in navigator) {
+            console.log("Serviceworker is available")
+            navigator.serviceWorker.register("/insects/serviceworker.js");
+        } else {
+            console.log("Serviceworker is NOT available")
+        }
+    </script>
+</body>
+
+</html>
